@@ -16,7 +16,7 @@
             </button>
           </div>
         </div>
-        <div :class="menuIsOpen ? 'block' : 'hidden'" class="nav-content fixed left-0 w-full z-20 bg-black md:block md:static md:text-right">
+        <div :class="menuIsOpen ? 'block' : 'hidden'" class="nav-content fixed left-0 w-full z-20 bg-black md:bg-transparent md:block md:static md:text-right">
           <ul class="md:flex md:justify-end">
             <template v-if="isAuthenticated">
               <router-link to="/" class="w-auto"><li @click="menuIsOpen = !menuIsOpen">トップ</li></router-link>
@@ -56,24 +56,6 @@ export default {
 };
 </script>
 
-<style scoped>
-.nav-content li {
-  @apply block m-2 p-2 border-b md:border-none hover:bg-royalblue-400;
-}
-
-.nav-content li:hover {
-  background: linear-gradient(-65deg, #d2e774 26.84%, #6be6d4 60%, #72e1ed 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-.logo-txt {
-  /* background: linear-gradient(270.97deg, #faf6eb -21.36%, #f374dd -2.45%, #a88cf8 26.84%, #C2A0FD 64.15%, #2cd1ff 108.29%, #B2F4B6 159.03%); */
-  background: linear-gradient(-65deg, #9ad031 26.84%, #6be6d4 60%, #25d4b9 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-</style>
-
 <style>
 html {
   background-color: #000;
@@ -86,16 +68,19 @@ html {
   color: #fff;
 }
 
-#nav {
-  padding: 30px;
+.nav-content li {
+  @apply block m-2 p-2 border-b md:border-none hover:bg-royalblue-400;
 }
 
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
+.nav-content li:hover {
+  background: linear-gradient(-65deg, #d2e774 26.84%, #6be6d4 60%, #72e1ed 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.logo-txt {
+  background: linear-gradient(-65deg, #9ad031 26.84%, #6be6d4 60%, #25d4b9 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
-#nav a.router-link-exact-active {
-  color: #42b983;
-}
 </style>
