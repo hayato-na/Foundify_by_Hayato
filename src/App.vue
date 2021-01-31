@@ -22,8 +22,7 @@
               <router-link to="/" class="w-auto"><li @click="menuIsOpen = !menuIsOpen">トップ</li></router-link>
               <router-link to="/mypage" class="w-auto"><li @click="menuIsOpen = !menuIsOpen">マイページ</li></router-link>
             </template>
-            <li class="w-auto hover__none">GitHub</li>
-            <!-- <li><router-link to="/">Contact Us</router-link></li> -->
+            <li class="w-auto"><a href="https://github.com/hayato-na/Foundify_by_Hayato" target="_blank" rel="noopener noreferrer">GitHub</a></li>
             <template v-if="isAuthenticated">
               <li class="cursor-pointer w-auto" @click="logout">LogOut</li>
             </template>
