@@ -1,5 +1,5 @@
 # ***Foundify***
-Spotifyで今聴いている音楽を共有するためのSNSです。
+Spotifyで今聴いている音楽をシェアするSNSです。
 <br>
 
 ## 使用技術
